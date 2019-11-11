@@ -9,50 +9,50 @@ It supports the following operations:
 
 ```
 	a. createTable(String tableName,String partitionKey,String sortKey) 
-		_Create a new table with partition key and sort key if it does not exist._
+		~~ Create a new table with partition key and sort key if it does not exist.
 ```
 
 ### 2. Insert data in Table
 
 ```
 	a. postData(String partitionKeyValue, String sortKeyValue, Map<String, Object> dataMap)
-		_Add data in table with partitionKeyValue, sortKeyValue and  all other key value pairs in form of a map_.
+		 ~~ Add data in table with partitionKeyValue, sortKeyValue and  all other key value pairs in form of a map.
 		
 	b. postData(String partitionKeyValue, String sortKeyValue, String key, String json)
-		*Add data in table with partitionKeyValue, sortKeyValue and a key against which json will be saved.*
+		~~ Add data in table with partitionKeyValue, sortKeyValue and a key against which json will be saved.
 		
 	c. postBulkData(String partitionKeyValue, Map<String, Map<String, Object>> data)
-		*Add bulk data within single table. The Map will have key-value pair where key is sortKey and value will be a map of all other key-value pair.*
+		~~ Add bulk data within single table. The Map will have key-value pair where key is sortKey and value will be a map of all other key-value pair.
 ```
 
 ### 3.	Update Attributes in the table	
 
 ```
 	a. updateMultipleAttributes(String partitionKeyValue, String sortKeyValue, Map<String, Object> dataMap)
-		*Update multiple keys for a record. dataMap param - Map with all the key/value pair that needs to be updated.*
+		~~ Update multiple keys for a record. dataMap param - Map with all the key/value pair that needs to be updated.
 		
 	b. updateExistingAttributeConditionally(String partitionKeyValue, String sortKeyValue,String conditionKey, Object conditionValue, String 		  updateKey, Object updateValue)
-		*Update specific key value based on a single conditional key value.*
+		~~ Update specific key value based on a single conditional key value.
 ```
 		
 ### 4. Retrieve data
 
 ```
 	a. String retrieveItem(String partitionKeyValue, String sortKeyValue)
-		*Retrieve item based on partition key and sort key.*
+		~~ Retrieve item based on partition key and sort key.
 		
 	b. scanItem(String key, String value)
-		*Retrieve item based on parameters key value.*
+		~~ Retrieve item based on parameters key value.
 ```
 		
 ### 5. Delete data
 
 ```
 	a. deleteItem(String partitionKeyValue, String sortKeyValue)
-		*Delete item based on partition key and sort key*.
+		~~ Delete item based on partition key and sort key.
 		
 	b. deleteItemConditional(String partitionKeyValue, String sortKeyValue, String conditionKey, Object conditionValue)
-		*Delete item based on partition key and sort key. Additionally any other key with value can be passed to delete conditionally only if the value matches*.
+		~~ Delete item based on partition key and sort key. Additionally any other key with value can be passed to delete conditionally only if the value matches.
 ```
 
 **Important**: DynamoConstants class has all the constants which are required to run this library. Replace all place holders here with appropriate values.
