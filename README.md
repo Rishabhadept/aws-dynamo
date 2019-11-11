@@ -4,7 +4,7 @@ The aws-dynamo project in Java provides a wrapper package on top of AWS librarie
 
 A typical use of this library is when You want perform operations on your dynamo table based on partition key and sort key. since this is a generic library, it will even support the case where you have a single dynamo table with different type of data based on partition key and sort key.
 
-It supports the following operations:
+**It supports the following operations:**
 ### 1. Create Table
 
 ```
